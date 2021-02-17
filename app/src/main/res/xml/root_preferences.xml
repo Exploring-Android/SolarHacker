@@ -1,0 +1,72 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <PreferenceCategory
+        android:title="@string/function_header"
+        app:iconSpaceReserved="false">
+
+        <SwitchPreferenceCompat
+            android:defaultValue="true"
+            android:key="switch_hook"
+            android:summary="@string/switch_hook_summary"
+            android:title="@string/switch_hook_title"
+            app:iconSpaceReserved="false" />
+
+        <SwitchPreferenceCompat
+            android:defaultValue="true"
+            android:dependency="switch_hook"
+            android:key="rm_splash_ad"
+            android:title="@string/rm_splashad_title"
+            app:iconSpaceReserved="false" />
+
+        <SwitchPreferenceCompat
+            android:defaultValue="true"
+            android:dependency="switch_hook"
+            android:key="rm_mainactivity_ad"
+            android:title="@string/rm_mainactivityad_title"
+            app:iconSpaceReserved="false" />
+
+        <SwitchPreferenceCompat
+            android:defaultValue="true"
+            android:dependency="switch_hook"
+            android:key="crack_videovip_verification"
+            android:title="@string/crack_videovip_title"
+            app:iconSpaceReserved="false" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/about_header"
+        app:iconSpaceReserved="false">
+
+        <PreferenceScreen
+            android:summary="@string/about_me_summary"
+            android:title="@string/about_me_title"
+            app:iconSpaceReserved="false">
+
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://github.com/Wtrwx" />
+        </PreferenceScreen>
+        <PreferenceScreen
+            android:summary="@string/about_org_summary"
+            android:title="@string/about_org_title"
+            app:iconSpaceReserved="false">
+
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://github.com/Exploring-Android" />
+        </PreferenceScreen>
+        <PreferenceScreen
+            android:summary="@string/about_project_summary"
+            android:title="@string/about_project_title"
+            app:iconSpaceReserved="false">
+
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://github.com/Exploring-Android/SolarHacker" />
+        </PreferenceScreen>
+    </PreferenceCategory>
+
+</PreferenceScreen>

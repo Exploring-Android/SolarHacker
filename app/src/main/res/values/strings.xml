@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">SolarHacker</string>
+    <string name="title_activity_settings">SolarHacker</string>
+
+    <!-- Function Preferences -->
+    <string name="function_header">Function Settings</string>
+    <string name="switch_hook_title">Hook switch</string>
+    <string name="switch_hook_summary">Need reboot to apply</string>
+    <string name="rm_splashad_title">Remove Splash AD</string>
+    <string name="rm_mainactivityad_title">Remove MainActivity AD</string>
+    <string name="crack_videovip_title">Crack video VIP verification</string>
+
+    <!-- About Preferences -->
+    <string name="about_header">About</string>
+    <string name="about_me_title">维他入我心(Wtrwx)</string>
+    <string name="about_me_summary">A Naive Android Developer</string>
+    <string name="about_org_title">Exploring Android</string>
+    <string name="about_org_summary">Some people are interested in Android development and decompilation</string>
+    <string name="about_project_title">SolarHacker</string>
+    <string name="about_project_summary">A xposed moudle for Fenbi Solar</string>
+
+    <!-- Settings Menu -->
+    <string name="menu_apply_title">Kill Solar to apply</string>
+
+    <!-- Dialog -->
+    <string name="dialog_activation_check_title">Warning!</string>
+    <string name="dialog_activation_check_message">You haven\'t installed xposed yet or SolarHacker hasn\'t been activated yet.</string>
+    <string name="dialog_activation_check_button">OK</string>
+</resources>
