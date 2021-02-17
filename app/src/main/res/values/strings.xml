@@ -17,7 +17,7 @@
     <string name="about_org_title">Exploring Android</string>
     <string name="about_org_summary">Some people are interested in Android development and decompilation</string>
     <string name="about_project_title">SolarHacker</string>
-    <string name="about_project_summary">A xposed moudle for Fenbi Solar</string>
+    <string name="about_project_summary">A Xposed Module for Fenbi Solar</string>
 
     <!-- Settings Menu -->
     <string name="menu_apply_title">Kill Solar to apply</string>
