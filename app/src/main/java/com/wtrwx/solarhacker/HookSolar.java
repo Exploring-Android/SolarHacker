@@ -24,10 +24,9 @@ public class HookSolar implements IXposedHookLoadPackage, IXposedHookZygoteInit 
 
     @Override
     public void handleLoadPackage(XC_LoadPackage.LoadPackageParam lpparam) throws Throwable {
-        String SOLARMODULE_PACKAGE_NAME = "com.wtrwx.solarhacker";
-        // Hook isModuleActive()
-        if (lpparam.packageName.equals(SOLARMODULE_PACKAGE_NAME)) {
-            Class<?> classAppUtils = XposedHelpers.findClassIfExists(SOLARMODULE_PACKAGE_NAME + ".utils.AppInfo", lpparam.classLoader);
+        // Hook isXposedActive()
+        if (lpparam.packageName.equals(BuildConfig.APPLICATION_ID)) {
+            Class<?> classAppUtils = XposedHelpers.findClassIfExists(BuildConfig.APPLICATION_ID + ".utils.AppInfo", lpparam.classLoader);
             if (classAppUtils != null) {
                 XposedHelpers.findAndHookMethod(classAppUtils, "isXposedActive", XC_MethodReplacement.returnConstant(true));
                 XposedBridge.log("[SolarHacker]Hook isXposedActive() Success");
@@ -145,7 +144,7 @@ public class HookSolar implements IXposedHookLoadPackage, IXposedHookZygoteInit 
     public void initZygote(StartupParam startupParam) throws Throwable {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
             File prefsFileProt =
-                    new File("/data/user_de/0/com.wtrwx.solarhacker/shared_prefs/com.wtrwx.solarhacker_preferences.xml");
+                    new File("/data/user_de/0/"+BuildConfig.APPLICATION_ID+"/shared_prefs/"+BuildConfig.APPLICATION_ID+"_preferences.xml");
             pluginPreferences = new XSharedPreferences(prefsFileProt);
         } else {
             pluginPreferences = new XSharedPreferences(BuildConfig.APPLICATION_ID);
